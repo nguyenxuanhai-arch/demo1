@@ -1,8 +1,8 @@
 package com.example.demo.modules.users.controllers;
 
 
-import com.example.demo.modules.users.reponses.LoginReponse;
 import com.example.demo.modules.users.requests.LoginRequest;
+import com.example.demo.modules.users.resources.LoginResource;
 import com.example.demo.modules.users.services.interfaces.UserServiceInterface;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,8 +20,8 @@ public class AuthController {
     }
 
     @PostMapping("login")
-    public ResponseEntity<LoginReponse> login(@RequestBody LoginRequest request) {
-        LoginReponse auth = userService.login(request);
+    public ResponseEntity<LoginResource> login(@RequestBody LoginRequest request) {
+        LoginResource auth = userService.login(request);
         return ResponseEntity.ok(auth);
     }
 }
