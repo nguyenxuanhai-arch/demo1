@@ -1,7 +1,7 @@
 package com.example.demo.modules.users.services.interfaces;
 
-import com.example.demo.modules.users.dtos.request.LoginRequest;
-import com.example.demo.modules.users.dtos.reponse.LoginReponse;
+import com.example.demo.modules.users.reponse.LoginReponse;
+import com.example.demo.modules.users.request.LoginRequest;
 
 public interface UserServiceInterface {
     LoginReponse login(LoginRequest request);

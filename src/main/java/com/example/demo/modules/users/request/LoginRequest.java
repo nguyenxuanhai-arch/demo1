@@ -1,4 +1,4 @@
-package com.example.demo.modules.users.dtos.request;
+package com.example.demo.modules.users.request;
 
 public class LoginRequest {
     private String email;

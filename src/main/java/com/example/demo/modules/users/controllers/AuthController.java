@@ -1,8 +1,8 @@
 package com.example.demo.modules.users.controllers;
 
 
-import com.example.demo.modules.users.dtos.reponse.LoginReponse;
-import com.example.demo.modules.users.dtos.request.LoginRequest;
+import com.example.demo.modules.users.reponse.LoginReponse;
+import com.example.demo.modules.users.request.LoginRequest;
 import com.example.demo.modules.users.services.interfaces.UserServiceInterface;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
