@@ -1,4 +1,4 @@
-package com.example.demo.modules.users.reponse;
+package com.example.demo.modules.users.reponses;
 
 import com.example.demo.modules.users.dtos.UserDTO;
 
