@@ -34,12 +34,19 @@ public class DatabaseSeeder implements CommandLineRunner {
             String passString = passwordEncoder.encode("password");
 
             User user = new User(
-                "Nguyen Xuan Hai",
-                "haixuan11598@gmail.com",
-                passString,
-                "1",
-                "0123456789"
+                // "Nguyen Xuan Hai",
+                // "haixuan11598@gmail.com",
+                // passString,
+                // "1",
+                // "0123456789"
             );
+
+            user.setName("Nguyen Xuan Hai");
+            user.setEmail("haixuan11598@gmail.com");
+            user.setPassword(passString);
+            user.setPhone("0123456789");
+            user.setUser_catalogue_id(String.valueOf(1L));
+            
             userRepository.save(user);
             logger.info("User table seeded");
         }

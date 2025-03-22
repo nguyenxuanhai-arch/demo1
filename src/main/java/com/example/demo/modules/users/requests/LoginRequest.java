@@ -1,6 +1,12 @@
 package com.example.demo.modules.users.requests;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+
 public class LoginRequest {
+
+    @Email(message = "Email khong hop le")
+    @NotBlank(message = "Email khong duoc de trong")
     private String email;
     private String password;
 
