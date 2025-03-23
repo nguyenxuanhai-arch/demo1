@@ -49,7 +49,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
 
         jwt = authHeader.substring(7);
         userID = jwtService.getUserIdFromJwt(jwt);
-        if (userID == null && SecurityContextHolder.getContext().getAuthentication() == null) {
+        if (userID != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = customUserDetailsService.loadUserByUsername(userID);
             logger.info(userDetails.getUsername());
             
