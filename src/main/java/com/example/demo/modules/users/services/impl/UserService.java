@@ -44,7 +44,8 @@ public class UserService extends BaseService implements UserServiceInterface {
             }
             UserResource userResource = new UserResource(
                 user.getId(),
-                user.getEmail()
+                user.getEmail(),
+                user.getName()
             );
             String token = jwtService.generateToken(user.getId(), user.getEmail());
             return new LoginResource(token, userResource);
@@ -60,4 +61,6 @@ public class UserService extends BaseService implements UserServiceInterface {
             return ResponseEntity.badRequest().body(errorResponse);
         }
     }
+
+    
 }
